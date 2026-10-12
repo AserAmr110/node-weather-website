@@ -12,6 +12,7 @@ const app = express();
 const publicDirectory = path.join(dirName, "../public");
 const viewsPath = path.join(dirName, "../templates/views");
 const partialsPath = path.join(dirName, "../templates/partials");
+const port = process.env.PORT || 3000
 
 app.set("view engine", "hbs");
 app.set("views", viewsPath);
@@ -98,6 +99,6 @@ app.get("*splat", (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log("Server is up on port 3000.");
+app.listen(port, () => {
+  console.log("Server is up on port " + port);
 });
