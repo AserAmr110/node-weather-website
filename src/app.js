@@ -2,8 +2,8 @@ import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
 import hbs from "hbs";
-import geocode from "./src/utils/geocode.js";
-import forecast from "./src/utils/forecast.js";
+import geocode from "./utils/geocode.js";
+import forecast from "./utils/forecast.js";
 
 const fileName = fileURLToPath(import.meta.url);
 const dirName = path.dirname(fileName);
